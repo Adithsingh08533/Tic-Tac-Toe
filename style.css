@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(166, 165, 208);
+    text-align: center;
+    position: relative; /* Allow absolute positioning of celebration */
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.game {
+    height: 60vmin; 
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 3);
+    font-size: 8vmin;
+    color: rgb(239, 16, 19);
+    background-color: rgb(207, 213, 219);
+}
+
+#reset-btn, #new-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 1rem;
+    border: none;
+}
+
+#msg {
+    color: azure;
+    font-size: 8vmin;
+}
+
+.msg-container {
+    height: 20vmin;
+}
+
+.hide {
+    display: none;
+}
+
+#celebration {
+    font-size: 5rem; 
+    position: absolute; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    animation: fall 5s forwards; 
+}
+
+@keyframes fall {
+    0% {
+        transform: translate(-50%, -100%); 
+        opacity: 1; 
+    }
+    100% {
+        transform: translate(-50%, 100vh); 
+        opacity: 0; 
+    }
+}
